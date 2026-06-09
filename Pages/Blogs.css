@@ -1,0 +1,22 @@
+/* ── BLOG ── */
+  .blog-list { padding: 3rem 4rem; }
+  .blog-post {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 2rem; align-items: flex-start;
+    cursor: pointer; transition: padding 0.2s;
+  }
+  .blog-post:hover { padding-left: 0.5rem; }
+  .blog-date {
+    font-family: var(--mono); font-size: 0.7rem;
+    color: var(--text3); white-space: nowrap; padding-top: 0.3rem;
+    min-width: 90px;
+  }
+  .blog-content h3 {
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--text); margin-bottom: 0.35rem;
+    transition: color 0.2s;
+  }
+  .blog-post:hover .blog-content h3 { color: var(--accent2); }
+  .blog-content p { font-size: 0.85rem; color: var(--text2); }
+  .blog-tags { display: flex; gap: 0.5rem; margin-top: 0.6rem; }

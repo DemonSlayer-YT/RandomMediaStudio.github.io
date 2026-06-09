@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Random Games, Content & Novels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Index.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">Random Games, Content & Novels</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" onclick="showPage('home')" data-page="home">Home</a></li>
+    <li><a href="#" onclick="showPage('portfolio')" data-page="portfolio">Portfolio</a></li>
+    <li><a href="#" onclick="showPage('games')" data-page="games">Games</a></li>
+    <li><a href="#" onclick="showPage('blog')" data-page="blog">Blog</a></li>
+    <li><a href="#" onclick="showPage('community')" data-page="community">Community</a></li>
+    <li><a href="#" onclick="showPage('novel')" data-page="novel">Novel</a></li>
+    <li><a href="#" onclick="showPage('videos')" data-page="videos">Videos</a></li>
+    <li><a href="#" onclick="showPage('photos')" data-page="photos">Photos</a></li>
+    <li><a href="#" onclick="showPage('minigames')" data-page="minigames">Demo</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-eyebrow">// developer · writer · creator</div>
+    <h1>Hi, I'm<br><span class="accent">Ivan</span></h1>
+    <p class="hero-tagline">I make <span class="typewriter" id="typewriter">random games</span><span class="cursor"></span></p>
+    <div class="hero-tags">
+      <span class="tag">Games</span>
+      <span class="tag">Novels</span>
+      <span class="tag">Software</span>
+      <span class="tag">Content</span>
+      <span class="tag">Videos</span>
+    </div>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="showPage('portfolio')">View Portfolio</button>
+      <button class="btn btn-ghost" onclick="showPage('games')">Play Games</button>
+    </div>
+    <div class="hero-scroll">
+      <span class="scroll-line"></span>
+      scroll to explore
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Featured work</div>
+    <div class="card-grid">
+      <a class="card" href="#" onclick="showPage('games');return false;">
+        <div class="card-icon">🎮</div>
+        <h3>Games</h3>
+        <p>Original titles, browser experiments, and game jams. From puzzle games to tiny arcades.</p>
+        <div class="card-meta"><span class="pill">Unity</span><span class="pill">Godot</span><span class="pill">HTML5</span></div>
+      </a>
+      <a class="card" href="#" onclick="showPage('novel');return false;">
+        <div class="card-icon">📖</div>
+        <h3>Novel</h3>
+        <p>An original long-form story. Chapters published as they're written.</p>
+        <div class="card-meta"><span class="pill">Fiction</span><span class="pill">In progress</span></div>
+      </a>
+      <a class="card" href="#" onclick="showPage('portfolio');return false;">
+        <div class="card-icon">💻</div>
+        <h3>Software</h3>
+        <p>Apps, tools, and experiments built across web, desktop, and mobile platforms.</p>
+        <div class="card-meta"><span class="pill">Web</span><span class="pill">Tools</span><span class="pill">APIs</span></div>
+      </a>
+      <a class="card" href="#" onclick="showPage('blog');return false;">
+        <div class="card-icon">✍️</div>
+        <h3>Blog & Logs</h3>
+        <p>Dev logs, thoughts on making things, and whatever else is on my mind.</p>
+        <div class="card-meta"><span class="pill">Devlog</span><span class="pill">Essays</span></div>
+      </a>
+      <a class="card" href="#" onclick="showPage('videos');return false;">
+        <div class="card-icon">🎬</div>
+        <h3>Videos</h3>
+        <p>Tutorials, game footage, commentary, and behind-the-scenes content.</p>
+        <div class="card-meta"><span class="pill">YouTube</span><span class="pill">Tutorials</span></div>
+      </a>
+      <a class="card" href="#" onclick="showPage('minigames');return false;">
+        <div class="card-icon">🕹️</div>
+        <h3>Minigames</h3>
+        <p>Tiny playable things right in the browser. No download needed.</p>
+        <div class="card-meta"><span class="pill">Browser</span><span class="pill">Free to play</span></div>
+      </a>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <p>© <span class="year"></span> Random Games, Content and Novels. Built by Ivan. All rights reserved.</p>
+    
+    <nav class="footer-nav">
+      <a href="#" onclick="showPage('portfolio');return false;">Portfolio</a>
+      <a href="#" onclick="showPage('games');return false;">Games</a>
+      <a href="#" onclick="showPage('blog');return false;">Blog</a>
+      <a href="#" onclick="showPage('novel');return false;">Novel</a>
+      <a href="#" onclick="showPage('community');return false;">Community</a>
+      <a href="#" onclick="showPage('minigames');return false;">Demo</a>
+      
+    </nav>
+  </footer>
+</div>
+<script>
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  const link = document.querySelector(`[data-page="${name}"]`);
+  if (link) link.classList.add('active');
+  document.getElementById('navLinks').classList.remove('open');
+  window.scrollTo(0, 0);
+  return false;
+}
+
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+// Typewriter
+const words = ['random games', 'original novels', 'software', 'content', 'playable things'];
+let wi = 0, ci = 0, deleting = false;
+const el = document.getElementById('typewriter');
+function type() {
+  const word = words[wi];
+  if (!deleting) {
+    el.textContent = word.slice(0, ++ci);
+    if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
+  } else {
+    el.textContent = word.slice(0, --ci);
+    if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+  }
+  setTimeout(type, deleting ? 60 : 90);
+}
+type();
+
+// Set home as active on load
+document.querySelector('[data-page="home"]').classList.add('active');
+
+// Set copyright year
+document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+</script>
+</body>
+</html>

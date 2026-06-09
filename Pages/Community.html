@@ -1,0 +1,162 @@
+<!-- COMMUNITY -->
+ <title>Community | Random Games, Content and Novels</title>
+ <link rel="stylesheet" href="Community.css">
+ <title>Community | Ivan's Portfolio</title>
+<div class="page" id="page-community">
+  <div class="page-header">
+    <h1>Community</h1>
+    <p>Join the conversation — follow along, share your work, and say hi.</p>
+  </div>
+  <div class="community-layout">
+
+    <!-- SOCIALS -->
+    <div>
+      <div class="community-section-title">Find me online</div>
+      <div class="socials-grid">
+        <a class="social-card" href="#" title="Add your Discord link">
+          <div class="s-icon">DC</div>
+          <h3>Discord</h3>
+          <p>Join the server — chat about games, writing, and whatever I'm building.</p>
+          <span class="s-handle">// link coming soon</span>
+        </a>
+        <a class="social-card" href="#" title="Add your Twitter/X link">
+          <div class="s-icon">X</div>
+          <h3>Twitter / X</h3>
+          <p>Updates, random thoughts, and behind-the-scenes posts.</p>
+          <span class="s-handle">// @yourhandle</span>
+        </a>
+        <a class="social-card" href="#" title="Add your YouTube link">
+          <div class="s-icon">YT</div>
+          <h3>YouTube</h3>
+          <p>Videos, devlogs, tutorials, and game footage.</p>
+          <span class="s-handle">// channel link</span>
+        </a>
+        <a class="social-card" href="#" title="Add your GitHub link">
+          <div class="s-icon">GH</div>
+          <h3>GitHub</h3>
+          <p>Open source projects, experiments, and code.</p>
+          <span class="s-handle">// github.com/ivan</span>
+        </a>
+        <a class="social-card" href="#" title="Add your TikTok link">
+          <div class="s-icon">TK</div>
+          <h3>TikTok</h3>
+          <p>Short clips, gameplay moments, and creative content.</p>
+          <span class="s-handle">// @yourhandle</span>
+        </a>
+        <a class="social-card" href="#" title="Add your Reddit link">
+          <div class="s-icon">RD</div>
+          <h3>Reddit</h3>
+          <p>Longer discussions, community posts, and fan threads.</p>
+          <span class="s-handle">// r/yoursubreddit</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div>
+      <div class="community-section-title">Newsletter</div>
+      <div class="newsletter-box">
+        <h3>Stay in the loop</h3>
+        <p>New games, novel chapters, videos, and devlogs — delivered straight to your inbox whenever I ship something. No spam, no schedules, just updates when there's something real to share.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="your@email.com" id="nl-email" />
+          <button class="btn btn-primary" onclick="handleNewsletterSignup()">Subscribe</button>
+        </div>
+        <p class="newsletter-note">No spam. Unsubscribe any time.</p>
+      </div>
+    </div>
+
+    <!-- FAN SHOWCASE -->
+    <div>
+      <div class="community-section-title">Fan showcase</div>
+      <div class="showcase-grid">
+        <div class="showcase-card">
+          <div class="showcase-thumb"><div class="grid-bg"></div><span class="icon">🎨</span></div>
+          <div class="showcase-body">
+            <h3>Fan art / submission title</h3>
+            <p>A short description of what was shared and which project it's based on.</p>
+            <p class="showcase-by">by community member</p>
+          </div>
+        </div>
+        <div class="showcase-card">
+          <div class="showcase-thumb"><div class="grid-bg"></div><span class="icon">✏️</span></div>
+          <div class="showcase-body">
+            <h3>Another submission</h3>
+            <p>Fan art, fan fiction, game mods, or anything the community creates.</p>
+            <p class="showcase-by">by community member</p>
+          </div>
+        </div>
+        <div class="showcase-card">
+          <div class="showcase-thumb" style="background: var(--bg3);">
+            <div class="grid-bg"></div>
+            <span class="icon" style="font-size:1.2rem; color: var(--text3);">Submit yours</span>
+          </div>
+          <div class="showcase-body">
+            <h3>Share your work</h3>
+            <p>Made something inspired by my games or novel? Send it in to be featured here.</p>
+            <p class="showcase-by">→ share via Discord</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MESSAGE BOARD -->
+    <div>
+      <div class="community-section-title">Message board</div>
+      <div class="message-board" id="messageboard">
+        <div class="message">
+          <div class="message-avatar">AJ</div>
+          <div class="message-content">
+            <div class="message-meta"><span class="uname">alexj</span> · 2 days ago</div>
+            <p>Just finished chapter 3 of the novel — the ending hit different. Can't wait for chapter 4.</p>
+          </div>
+        </div>
+        <div class="message">
+          <div class="message-avatar">KM</div>
+          <div class="message-content">
+            <div class="message-meta"><span class="uname">kmakes</span> · 4 days ago</div>
+            <p>The puzzle game is seriously underrated. I've sent it to three friends already.</p>
+          </div>
+        </div>
+        <div class="message">
+          <div class="message-avatar">rr</div>
+          <div class="message-content">
+            <div class="message-meta"><span class="uname">retroreader</span> · 1 week ago</div>
+            <p>Love the devlog posts — would love to see more about how you balance writing with coding.</p>
+          </div>
+        </div>
+      </div>
+      <div class="message-post-box">
+        <textarea id="msg-input" placeholder="Leave a message..."></textarea>
+        <div><button class="btn btn-ghost" onclick="postMessage()">Post message</button></div>
+      </div>
+    </div>
+
+  </div>
+  <footer class="site-footer">
+    <p>© <span class="year"></span> Random Games, Content and Novels. Built by Ivan. All rights reserved.</p>
+    <div class="footer-top">
+      <nav class="footer-nav">
+        <a href="#" onclick="showPage('portfolio');return false;">Portfolio</a>
+        <a href="#" onclick="showPage('games');return false;">Games</a>
+        <a href="#" onclick="showPage('blog');return false;">Blog</a>
+        <a href="#" onclick="showPage('novel');return false;">Novel</a>
+        <a href="#" onclick="showPage('videos');return false;">Videos</a>
+        <a href="#" onclick="showPage('photos');return false;">Photos</a>
+        <a href="#" onclick="showPage('community');return false;">Community</a>
+        <a href="#" onclick="showPage('minigames');return false;">Play</a>
+      </nav>
+      <div class="footer-socials">
+        <a class="social-link" href="#" title="Discord">DC</a>
+        <a class="social-link" href="#" title="Twitter / X">X</a>
+        <a class="social-link" href="#" title="YouTube">YT</a>
+        <a class="social-link" href="#" title="GitHub">GH</a>
+        <a class="social-link" href="#" title="TikTok">TK</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span class="year"></span> Random Games, Content & Novels. All rights reserved.</p>
+      <p>Built by Ivan · Games, Content & Novels</p>
+    </div>
+  </footer>
+</div>

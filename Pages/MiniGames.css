@@ -1,0 +1,33 @@
+/* ── MINIGAMES ── */
+  .minigames-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    padding: 3rem 4rem;
+  }
+  .minigame-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+    text-align: center;
+  }
+  .minigame-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+  .minigame-icon {
+    font-size: 2.5rem; margin-bottom: 1rem;
+    display: block;
+  }
+  .minigame-card h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.3rem; }
+  .minigame-card p { font-size: 0.82rem; color: var(--text2); }
+  .minigame-badge {
+    display: inline-block; margin-top: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--border2);
+    border-radius: 100px;
+    font-family: var(--mono); font-size: 0.68rem;
+    color: var(--text3);
+  }
+  .minigame-badge.playable { color: #4ade80; border-color: rgba(74,222,128,0.3); }
+  .minigame-badge.coming { color: var(--text3); }
